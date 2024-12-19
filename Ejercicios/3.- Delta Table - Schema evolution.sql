@@ -75,7 +75,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 10.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y edad (int).
+-- MAGIC 10.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
 
 -- COMMAND ----------
 
@@ -90,7 +90,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 13.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y edad (int).
+-- MAGIC 13.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
 
 -- COMMAND ----------
 
