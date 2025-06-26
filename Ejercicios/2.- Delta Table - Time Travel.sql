@@ -5,7 +5,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 1.- Cuando toca hablar de versiones toca ver el historial de cambios de la tabla.
+-- MAGIC 1.- Cuando toca hablar de versiones toca ver el historial de cambios de la tabla. Vamos a trabajar sobre la tabla **departamentos_delta** que hemos creado antes.
 -- MAGIC
 -- MAGIC [Databricks Describe Table](https://docs.databricks.com/en/delta/history.html#retrieve-delta-table-history)
 

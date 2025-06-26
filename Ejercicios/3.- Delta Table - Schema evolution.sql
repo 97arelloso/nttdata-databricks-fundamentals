@@ -5,7 +5,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 1.- Para estos ejercicios vamos a tomar como referencia las tablas creadas en el ejercicio anterior (se va a ejecutar todo sobre ambas tablas). Veamos qué estructura tienen.
+-- MAGIC 1.- Para estos ejercicios vamos a tomar como referencia la tabla creada en el ejercicio anterior. Veamos qué estructura tiene.
 -- MAGIC
 -- MAGIC [Databricks Describe Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-aux-describe-table.html)
 
@@ -19,16 +19,17 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 3.- Ahora nos piden que quieren eliminar la columna FLOOR, que carece de utilidad.
+-- MAGIC 3.- Se ha decidido incluir una columna nueva, así que vamos a crearla:
+-- MAGIC - INSERT_DATE (STRING)
 -- MAGIC
--- MAGIC [Databricks Drop Column](https://docs.databricks.com/en/delta/column-mapping.html#drop-columns)
+-- MAGIC [Databricks Alter Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-ddl-alter-table.html)
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 4.- Se han dado cuenta de que sí que necesitaban esa columna, así que vamos a crearla.
+-- MAGIC 4.- Ahora nos piden que quieren eliminar la columna INSERT_DATE, que carece de utilidad.
 -- MAGIC
--- MAGIC [Databricks Alter Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-ddl-alter-table.html)
+-- MAGIC [Databricks Drop Column](https://docs.databricks.com/en/delta/column-mapping.html#drop-columns)
 
 -- COMMAND ----------
 
@@ -45,9 +46,9 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 6.- El cliente nos está volviendo locos en este ejercicio... Ahora nos piden que el ID no puede ser mayor de 30.
+-- MAGIC 6.- Para probar esta funcionalidad, vamos a insertar un par de filas: una que cumpla la condición y otra que no.
 -- MAGIC
--- MAGIC [Databricks Check Constraints](https://docs.databricks.com/en/tables/constraints.html#set-a-check-constraint-in-databricks)
+-- MAGIC [Databricks Insert Into](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-dml-insert-into.html#insert-into)
 
 -- COMMAND ----------
 
@@ -57,19 +58,12 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 8.- Para probar esta funcionalidad, vamos a generar un par de filas: una que cumpla la condición y otra que no.
--- MAGIC
--- MAGIC [Databricks Insert Into](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-dml-insert-into.html#insert-into)
-
--- COMMAND ----------
-
--- MAGIC %md
 -- MAGIC # SCHEMA ENFORCEMENT
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 9.- En python/scala vamos a crear un DataFrame que tenga las siguientes columnas: nombre (string) y edad (int). Y vamos a insertar un par de filas sobre la ruta /tmp/parquet_table_**nombre**.
+-- MAGIC 8.- Vamos a crear un DataFrame que tenga las siguientes columnas: nombre (string) y edad (int). Y vamos a insertar un par de filas sobre la ruta /tmp/parquet_table_**nombre**.
 -- MAGIC
 
 -- COMMAND ----------

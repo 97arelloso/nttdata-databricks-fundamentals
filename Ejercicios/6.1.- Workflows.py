@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC 1.- Este notebook se ejecutará desde el Workflow. Desde el workflow pasaremos la variable "tabla", sobre la cual ejecutaremos un conteo.
+# MAGIC 1.- Este notebook se ejecutará en el Workflow. Desde el workflow le pasaremos hardcodeada la variable "schema_**nombre**.departamentos_delta", sobre la cual ejecutaremos un conteo.
 # MAGIC
 # MAGIC [Get task parameter](https://docs.databricks.com/en/dev-tools/databricks-utils.html#widgets-utility-dbutilswidgets)
 

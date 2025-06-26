@@ -8,6 +8,12 @@
 
 -- COMMAND ----------
 
+CREATE SCHEMA IF NOT EXISTS schema_alejandro2;
+
+USE SCHEMA schema_alejandro2;
+
+-- COMMAND ----------
+
 -- MAGIC %md
 -- MAGIC 2.- Crear la tabla "**departamentos_delta**" con formato delta sobre nuestro esquema con las siguientes columnas:
 -- MAGIC - ID (identificador único, numérico)
@@ -31,12 +37,10 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 4.- Análogo al paso 2, crear la tabla "**departamentos_external**" con formato parquet, apuntando a "s3://databricks-workspace-stack-be532-bucket/tablas_externas/departamentos_parquet_**nombre**" y sobre nuestro esquema con las siguientes columnas:
+-- MAGIC 4.- Identificar la tabla ya creada "**schema_alejandro.departamentos_external**" con formato parquet, apuntando a "s3://databricks-workspace-stack-be532-bucket/tablas_externas/departamentos_parquet" con las siguientes columnas:
 -- MAGIC - ID (identificador único, numérico)
 -- MAGIC - NAME (nombre del departamento)
 -- MAGIC - FLOOR (piso en el que se encuentra el departamento, numérico)
--- MAGIC
--- MAGIC [Databricks Create Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-ddl-create-table-using.html)
 
 -- COMMAND ----------
 
@@ -53,23 +57,24 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 6.- Ahora vamos a actualizar la tabla departamentos_delta para que elimine/actualice la fila de ID 4.
+-- MAGIC 6.- Ahora vamos a intentar actualizar la tabla departamentos_delta de vuestro esquema para que elimine/actualice la fila de ID 4.
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 7.- Actualizar la tabla departamentos_external para que elimine/actualice la fila de ID 4.
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC ### Paramos aquí
+-- MAGIC 7.- Ahora hacer lo mismo que en el paso anterior pero para  la tabla schema_alejandro.departamentos_external.
 -- MAGIC
+-- MAGIC _Este paso va a fallar._
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 8.- Vamos a ver qué información nos proporcionan cada una de las tablas. Para este ejercicio necesitaremos las rutas donde se almacenan los datos.
+-- MAGIC > Tanto eliminar como actualizar registros de una tabla externa no está permitido, sin embargo, una tabla delta sí que permite este tipo de operaciones.
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC 8.- Vamos a ver qué información nos proporcionan cada una de las tablas.
 -- MAGIC
 -- MAGIC [Databricks Describe Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-aux-describe-table.html)
 

@@ -12,7 +12,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 2.- Ahora vamos a insertar los siguientes datos (mismo ID que en la tabla departamentos_delta para cada nombre):
+-- MAGIC 2.- Ahora vamos a insertar los siguientes datos:
 -- MAGIC - Filas sin cambios:
 -- MAGIC   - 1 | Finanzas | 4
 -- MAGIC - Filas actualizadas:
@@ -34,6 +34,11 @@
 -- COMMAND ----------
 
 -- MAGIC %md
+-- MAGIC **EJERCICIO EXTRA**
+
+-- COMMAND ----------
+
+-- MAGIC %md
 -- MAGIC 4.- Vamos a regresar la tabla _departamentos_delta_ a la versión anterior al merge, como hemos visto en el ejercicio _3.- Delta Table - Time Travel_.
 -- MAGIC
 -- MAGIC [Restore Version](https://docs.databricks.com/en/delta/history.html#restore-a-delta-table-to-an-earlier-state)
@@ -41,6 +46,6 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 5.- Ahora vamos a hacer el mismo merge pero utilizando scala o python.
+-- MAGIC 5.- Ahora vamos a hacer el mismo merge pero utilizando python.
 -- MAGIC
 -- MAGIC [Databricks Merge](https://docs.databricks.com/en/delta/merge.html)
