@@ -5,7 +5,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 1.- Para estos ejercicios vamos a tomar como referencia la tabla creada en el ejercicio anterior. Veamos qué estructura tiene.
+-- MAGIC 1.- Para estos ejercicios vamos a tomar como referencia la tabla **departamentos_delta**. Veamos qué estructura tiene.
 -- MAGIC
 -- MAGIC [Databricks Describe Table](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-aux-describe-table.html)
 
@@ -41,6 +41,8 @@
 -- MAGIC %md
 -- MAGIC 5.- Nos surge ahora la necesidad de meter una condición a la tabla a la hora de insertar los datos. No queremos que el piso sea mayor que 30.
 -- MAGIC
+-- MAGIC _Este paso va a fallar dado que hay una fila que no cumple la norma. Podemos modificarla para que cumpla la norma._
+-- MAGIC
 -- MAGIC [Databricks Check Constraints](https://docs.databricks.com/en/tables/constraints.html#set-a-check-constraint-in-databricks)
 
 -- COMMAND ----------
@@ -69,22 +71,24 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 10.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
+-- MAGIC 9.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 11.- Leemos los datos a ver con qué nos encontramos.
+-- MAGIC 10.- Leemos los datos a ver con qué nos encontramos.
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 12.- Ahora vamos a generar el mismo DataFrame que antes, pero lo vamos a insertar en una tabla delta en la ruta /tmp/delta_table_**nombre**.
+-- MAGIC 11.- Ahora vamos a generar el mismo DataFrame que antes, pero lo vamos a insertar en una tabla delta en la ruta /tmp/delta_table_**nombre**.
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 13.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
+-- MAGIC 12.- Ahora vamos a insertar sobre esa misma tabla otro par de registros, pero las columnas van a ser: nombre (string) y apellido (string).
+-- MAGIC
+-- MAGIC _Este paso tiene que fallar._
 
 -- COMMAND ----------
 

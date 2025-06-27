@@ -8,12 +8,6 @@
 
 -- COMMAND ----------
 
-CREATE SCHEMA IF NOT EXISTS schema_alejandro2;
-
-USE SCHEMA schema_alejandro2;
-
--- COMMAND ----------
-
 -- MAGIC %md
 -- MAGIC 2.- Crear la tabla "**departamentos_delta**" con formato delta sobre nuestro esquema con las siguientes columnas:
 -- MAGIC - ID (identificador único, numérico)
@@ -83,41 +77,22 @@ USE SCHEMA schema_alejandro2;
 -- MAGIC %md
 -- MAGIC 9.- Ahora, con la ruta sacada en el paso anterior, se va a sacar un listado de los archivos que hay en esa ruta.
 -- MAGIC
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC 10.- Dejando de lado la tabla externa de momento, vamos a ver cómo se comportan los archivos en las tablas delta. Para ello, hay que sacar el detalle de la tabla.
+-- MAGIC _Al intentar acceder a los archivos de la tabla managed va a fallar._
 -- MAGIC
--- MAGIC [Databricks Describe Detail](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-aux-describe-table.html#describe-detail)
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 11.- Ahora, con la ruta sacada en el paso anterior, se va a sacar un listado de los archivos que hay en esa ruta.
--- MAGIC
--- MAGIC [Databricks dbutils.fs](https://learn.microsoft.com/es-es/azure/databricks/dev-tools/databricks-utils#--file-system-utility-dbutilsfs)
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC 12.- Actualizamos las plantas de todos los departamentos inferiores a la planta 15, aumentando su piso en 1.
--- MAGIC
--- MAGIC [Databricks Update Table](https://docs.databricks.com/en/sql/language-manual/delta-update.html)
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC 13.- Ya que no podemos sacar un listado de archivos, podemos ver qué ha pasado con los archivos parquet si entramos en la ruta del s3.
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC 14.- Para comprobar esto, vamos a leer el Transaction Log. 
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC 15.- Ahora vamos a sacar el historial de cambios de la tabla.
+-- MAGIC 10.- Ahora vamos a sacar el historial de cambios de la tabla.
 -- MAGIC
 -- MAGIC [Databricks Describe History](https://www.databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC 11.- Ya que no podemos sacar un listado de archivos, podemos ver qué ha pasado con los archivos parquet si entramos en la ruta del s3.
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC 12.- Para comprobar esto, vamos a leer el Transaction Log. 

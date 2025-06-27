@@ -22,7 +22,9 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 4.- Ahora vamos a eliminar los archivos sobrantes, que ya no se utilizan. Para ello ejecutaremos el comando vacuum.``
+-- MAGIC 4.- Ahora vamos a eliminar los archivos sobrantes, que ya no se utilizan. Para ello ejecutaremos el comando vacuum.
+-- MAGIC
+-- MAGIC _Este paso va a fallar._
 
 -- COMMAND ----------
 
@@ -33,11 +35,6 @@
 
 -- MAGIC %md
 -- MAGIC 6.- Ahora sí que podemos ejecutar el vacuum para eliminar los archivos.
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC Como alternativa, podemos ejecutar el vacuum expecificándole el periodo de retención.
 
 -- COMMAND ----------
 

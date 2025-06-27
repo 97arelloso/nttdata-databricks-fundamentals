@@ -24,7 +24,7 @@
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC 3.- Ahora vamos a leer la versión tras el primer delete, pero vamos a leer por fecha.
+-- MAGIC 3.- Ahora vamos a leer la versión tras el primer update/delete, pero vamos a leer por fecha.
 -- MAGIC
 -- MAGIC [Read Version](https://docs.databricks.com/en/delta/history.html#delta-time-travel-syntax)
 
