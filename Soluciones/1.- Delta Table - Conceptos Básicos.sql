@@ -158,7 +158,7 @@ list 's3://databricks-workspace-stack-be532-bucket/tablas_externas/departamentos
 
 -- COMMAND ----------
 
-DESCRIBE HISTORY departamentos_delta
+DESCRIBE HISTORY schema_alejandro.departamentos_delta
 
 -- COMMAND ----------
 

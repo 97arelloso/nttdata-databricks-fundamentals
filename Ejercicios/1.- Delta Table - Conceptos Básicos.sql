@@ -8,6 +8,10 @@
 
 -- COMMAND ----------
 
+CREATE SCHEMA x
+
+-- COMMAND ----------
+
 -- MAGIC %md
 -- MAGIC 2.- Crear la tabla "**departamentos_delta**" con formato delta sobre nuestro esquema con las siguientes columnas:
 -- MAGIC - ID (identificador único, numérico)
@@ -35,6 +39,16 @@
 -- MAGIC - ID (identificador único, numérico)
 -- MAGIC - NAME (nombre del departamento)
 -- MAGIC - FLOOR (piso en el que se encuentra el departamento, numérico)
+
+-- COMMAND ----------
+
+create external table schema_alejandro.departamentos_external (
+  ID int,
+  NAME string,
+  FLOOR int
+)
+using parquet
+location 's3://databricks-workspace-stack-be532-bucket/tablas_externas/departamentos_parquet'
 
 -- COMMAND ----------
 
